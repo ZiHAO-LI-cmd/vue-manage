@@ -2,18 +2,16 @@
 import VueRouter from 'vue-router'
 //引入组件
 import About from '../src/components/About'
-import Home from '../src/view/Home'
+import Main from '../src/view/Main'
+import Home from '../src/components/Home'
 
 //创建并暴露一个路由器
 export default new VueRouter({
 	routes: [
 		{
-			path: '/about',
-			component: About
-		},
-		{
-			path: '/home',
-			component: Home
+            path: '/home',
+            name: 'home',
+            component: Home,
 		}
 	]
 })
