@@ -14,11 +14,15 @@ import './assets/less/index.less'
 
 import store from './store'
 
+import http from 'axios'
+
 //关闭Vue的生产提示
 Vue.config.productionTip = false
 //应用插件
 Vue.use(VueRouter)
 Vue.use(ElementUI) 
+
+Vue.prototype.$http = http
 
 
 //创建vm
