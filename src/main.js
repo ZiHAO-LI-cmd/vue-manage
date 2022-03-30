@@ -16,6 +16,8 @@ import store from './store'
 
 import http from 'axios'
 
+import '../api/mock.js'
+
 //关闭Vue的生产提示
 Vue.config.productionTip = false
 //应用插件
