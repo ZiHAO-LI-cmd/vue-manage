@@ -8,6 +8,11 @@ import Mall from '../src/view/mall'
 import PageOne from '../src/view/other/pageOne.vue'
 import PageTwo from '../src/view/other/pageTwo.vue'
 
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
 //创建并暴露一个路由器
 export default new VueRouter({
 	routes: [
