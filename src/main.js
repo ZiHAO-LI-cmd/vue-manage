@@ -7,7 +7,7 @@ import VueRouter from 'vue-router'
 //引入路由器
 import router from '../router'
 
-import ElementUI from 'element-ui';
+import ElementUI, { MessageBox } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 import './assets/less/index.less'
@@ -25,6 +25,7 @@ Vue.use(VueRouter)
 Vue.use(ElementUI) 
 
 Vue.prototype.$http = http
+Vue.prototype.$confirm = MessageBox.confirm
 
 
 //创建vm
