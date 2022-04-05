@@ -7,6 +7,7 @@ import User from '../src/view/user'
 import Mall from '../src/view/mall'
 import PageOne from '../src/view/other/pageOne.vue'
 import PageTwo from '../src/view/other/pageTwo.vue'
+import Login from '../src/view/Login/login.vue'
 
 const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
@@ -40,6 +41,11 @@ export default new VueRouter({
 			path: '/page2',
 			name: 'page2',
 			component: PageTwo,
+		},
+		{
+			path: '/login',
+			name: 'login',
+			component: Login,
 		}
 	]
 })

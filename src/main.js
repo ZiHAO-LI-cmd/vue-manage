@@ -28,6 +28,16 @@ Vue.prototype.$http = http
 Vue.prototype.$confirm = MessageBox.confirm
 
 
+router.beforeEach((to, from, next) => {
+	store.commit('getToken')
+	const token = store.state.token
+	if (!token && to.name != 'login') {
+		next({ name: 'login' })
+	} else {
+		next()
+	}
+})
+
 //创建vm
 new Vue({
 	el:'#app',
